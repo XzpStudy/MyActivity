@@ -18,7 +18,7 @@ public class ThirdActivity extends Activity {
     }
 
     /**
-     * 显式意图跳转第三方应用
+     * 显式意图跳转手机浏览器
      * @param view
      */
     public void skipShowIntent(View view){
@@ -29,15 +29,14 @@ public class ThirdActivity extends Activity {
     }
 
     /**
-     * 隐式意图跳转第三方应用
+     * 隐式意图跳转手机浏览器
      * @param view
      */
     public void skipHideIntent(View view){
         Intent intent = new Intent();
         //这里举个例子，Action、Category和Package视情况而定
-        intent.setAction("com.android.action.SEARCH");
-        intent.addCategory(Intent.CATEGORY_DEFAULT);
-        intent.setPackage("com.android.browser");
+        intent.setAction("android.intent.action.VIEW");
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
         startActivity(intent);
     }
 }
