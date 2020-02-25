@@ -1,4 +1,4 @@
-package com.example.myapplication.intentwithoperate.camera;
+package com.example.myapplication.intentwithoperate;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 
+/**
+ * 调用相机拍照并返回结果
+ */
 public class CameraRequestActivity extends AppCompatActivity {
 
     Button button;
@@ -29,7 +32,7 @@ public class CameraRequestActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setAction("android.media.action.STILL_IMAGE_CAMERA");
+                intent.setAction("android.media.action.IMAGE_CAPTURE");
                 intent.addCategory(Intent.CATEGORY_DEFAULT);
                 startActivityForResult(intent,1);
             }
@@ -41,6 +44,7 @@ public class CameraRequestActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(1 == requestCode){
             if(Activity.RESULT_OK == resultCode && data != null){
+                //用Bitmap来接收照片
                 Bitmap bitmap = data.getParcelableExtra("data");
                 imageView.setImageBitmap(bitmap);
             }else if(Activity.RESULT_CANCELED == resultCode){
