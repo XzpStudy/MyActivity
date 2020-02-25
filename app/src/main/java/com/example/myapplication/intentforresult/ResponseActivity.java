@@ -36,7 +36,9 @@ public class ResponseActivity extends AppCompatActivity {
                 }
                 Intent intent = new Intent();
                 intent.putExtra("result",msg);
+                //设置结果码和数据
                 setResult(2,intent);
+                //不要忘了调用finish()方法结束当前Activity
                 finish();
             }
         });

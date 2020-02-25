@@ -42,6 +42,9 @@ public class CameraRequestActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        /**
+         * Activity.RESULT_OK和Activity.RESULT_CANCELED是安卓系统定义的俩个常量，用于表示相机照相的“√”和“×”
+         */
         if(1 == requestCode){
             if(Activity.RESULT_OK == resultCode && data != null){
                 //用Bitmap来接收照片

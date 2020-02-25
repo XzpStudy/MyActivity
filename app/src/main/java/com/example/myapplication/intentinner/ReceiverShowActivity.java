@@ -19,6 +19,7 @@ public class ReceiverShowActivity extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receiver_show);
+        //通过getIntent()方法获取传过来Intent
         Intent intent = getIntent();
         String account = intent.getStringExtra("account");
         String password = intent.getStringExtra("password");
