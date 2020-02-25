@@ -11,13 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".intentwithoperate.CallPhoneActivity">
+        <activity android:name=".intentwithoperate.camera.CameraRequestActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".intentinner.SendMessageActivity"></activity>
+        <activity android:name=".intentforresult.ResponseActivity" />
+        <activity android:name=".intentforresult.RequestActivity"></activity>
+        <activity android:name=".intentwithoperate.CallPhoneActivity"></activity>
+        <activity android:name=".intentinner.SendMessageActivity" />
         <activity android:name=".intentinner.ReceiverShowActivity" />
         <activity android:name=".intentinner.ReceiverHideActivity">
             <intent-filter>

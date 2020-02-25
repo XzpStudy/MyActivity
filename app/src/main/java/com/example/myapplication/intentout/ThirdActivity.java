@@ -36,7 +36,7 @@ public class ThirdActivity extends Activity {
         Intent intent = new Intent();
         //这里举个例子，Action、Category和Package视情况而定
         intent.setAction("android.intent.action.VIEW");
-        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
         startActivity(intent);
     }
 }

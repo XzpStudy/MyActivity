@@ -1,14 +1,15 @@
 package com.example.myapplication.intentwithoperate;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-
 import com.example.myapplication.R;
 
+/**
+ * 调用第三方程序打电话
+ */
 public class CallPhoneActivity extends AppCompatActivity {
 
     @Override
